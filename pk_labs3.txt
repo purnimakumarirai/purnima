@@ -1,0 +1,198 @@
+3rd LAB COMMANDS USED IN UNIX LAB
+[WHO]:-
+
+WHO -b ENTER ->SYSTEM BOOT 2018-01-31 08:40
+
+
+
+
+WHO -a ENTER ->SYSTEM BOOT 2018-01-31 08:40
+               RUN-LEVEL 5 2018-01-31 08:41
+               CS2016a212 +tty2  2018-01-31 08:41 00:31   1422(/DEV/tty2)
+
+
+WHO -R ENTER ->RUN-LEVEL 5 2018-01-31 08:41
+
+WHO -Q ENTER -> cs2016a2212
+
+                #user=1
+ls -a ENTER ->   .bash_history
+                 .bash_logout
+
+
+cal -b ENTER ->
+		Usage: cal [general options] [-jy] [[month] year]
+	       cal [general options] [-j] [-m month] [year]
+ 	      ncal -C [general options] [-jy] [[month] year]
+ 	      ncal -C [general options] [-j] [-m month] [year]
+ 	      ncal [general options] [-bhJjpwySM] [-H yyyy-mm-dd] [-s country_code] [[month] year]
+ 	      ncal [general options] [-bhJeoSM] [year]
+General options: [-31] [-A months] [-B months] [-d yyyy-mm]
+
+
+ MAN _d ENTER-> ruid=1003, euid=1003
+                rgid=1003, egid=1003
+                ++priv_drop_count = 1
+                From the config file /etc/manpath.config:
+
+                Mandatory mandir `/usr/man'.
+                Mandatory mandir `/usr/share/man'.
+                Mandatory mandir `/usr/local/share/man'.
+                Path `/bin' mapped to mandir `/usr/share/man'.
+                Path `/usr/bin' mapped to mandir `/usr/share/man'.
+     		Path `/sbin' mapped to mandir `/usr/share/man'.
+		Path `/usr/sbin' mapped to mandir `/usr/share/man'.
+		Path `/usr/local/bin' mapped to mandir `/usr/local/man'.
+		Path `/usr/local/bin' mapped to mandir `/usr/local/share/man'.
+		Path `/usr/local/sbin' mapped to mandir `/usr/local/man'.
+		Path `/usr/local/sbin' mapped to mandir `/usr/local/share/man'.
+		Path `/usr/X11R6/bin' mapped to mandir `/usr/X11R6/man'.
+		Path `/usr/bin/X11' mapped to mandir `/usr/X11R6/man'.
+		Path `/usr/games' mapped to mandir `/usr/share/man'.
+		Path `/opt/bin' mapped to mandir `/opt/man'.
+		Path `/opt/sbin' mapped to mandir `/opt/man'.
+		Global mandir `/usr/man', catdir `/var/cache/man/fsstnd'.
+		Global mandir `/usr/share/man', catdir `/var/cache/man'.
+		Global mandir `/usr/local/man', catdir `/var/cache/man/oldlocal'.
+		Global mandir `/usr/local/share/man', catdir `/var/cache/man/local'.
+		Global mandir `/usr/X11R6/man', catdir `/var/cache/man/X11R6'.
+		Global mandir `/opt/man', catdir `/var/cache/man/opt'.
+		Added section `1'.
+		Added section `n'.
+		Added section `l'.
+		Added section `8'.
+		Added section `3'.
+		Added section `2'.
+		Added section `3posix'.
+		Added section `3pm'.
+		Added section `3perl'.
+		Added section `3am'.
+		Added section `5'.
+		Added section `4'.
+		Added section `9'.
+		Added section `6'.
+		Added section `7'.
+		`/usr/man'	`'	`1'
+		`/usr/share/man'	`'	`1'
+		`/usr/local/share/man'	`'	`1'
+		`/bin'	`/usr/share/man'	`0'
+		`/usr/bin'	`/usr/share/man'	`0'
+		`/sbin'	`/usr/share/man'	`0'
+		`/usr/sbin'	`/usr/share/man'	`0'
+		`/usr/local/bin'	`/usr/local/man'	`0'
+		`/usr/local/bin'	`/usr/local/share/man'	`0'
+		`/usr/local/sbin'	`/usr/local/man'	`0'
+		`/usr/local/sbin'	`/usr/local/share/man'	`0'
+		`/usr/X11R6/bin'	`/usr/X11R6/man'	`0'
+		`/usr/bin/X11'	`/usr/X11R6/man'	`0'
+		`/usr/games'	`/usr/share/man'	`0'
+		`/opt/bin'	`/opt/man'	`0'
+		`/opt/sbin'	`/opt/man'	`0'
+		`/usr/man'	`/var/cache/man/fsstnd'	`-1'
+		`/usr/share/man'	`/var/cache/man'	`-1'
+		`/usr/local/man'	`/var/cache/man/oldlocal'	`-1'
+		`/usr/local/share/man'	`/var/cache/man/local'	`-1'
+		`/usr/X11R6/man'	`/var/cache/man/X11R6'	`-1'
+		`/opt/man'	`/var/cache/man/opt'	`-1'
+		`1'	`'	`-5'
+		`n'	`'	`-5'
+		`l'	`'	`-5'
+		`8'	`'	`-5'
+		`3'	`'	`-5'
+		`2'	`'	`-5'
+		`3posix'	`'	`-5'
+		`3pm'	`'	`-5'
+		`3perl'	`'	`-5'
+		`3am'	`'	`-5'
+		`5'	`'	`-5'
+		`4'	`'	`-5'
+		`9'	`'	`-5'
+		`6'	`'	`-5'
+		`7'	`'	`-5'
+		is a tty
+		real user = 1003; effective user = 1003
+
+		using pager as pager
+
+bc -w ENTER-> bc 1.06.95
+		Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006 Free Software Foundation, Inc.
+		This is free software with ABSOLUTELY NO WARRANTY.
+		For details type `warranty'. 
+date --help->   FORMAT controls the output.  Interpreted sequences are:
+
+		  %%   a literal %
+		  %a   locale's abbreviated weekday name (e.g., Sun)
+		  %A   locale's full weekday name (e.g., Sunday)
+		  %b   locale's abbreviated month name (e.g., Jan)
+		  %B   locale's full month name (e.g., January)
+		  %c   locale's date and time (e.g., Thu Mar  3 23:05:25 2005)
+		  %C   century; like %Y, except omit last two digits (e.g., 20)
+		  %d   day of month (e.g., 01)
+		  %D   date; same as %m/%d/%y
+		  %e   day of month, space padded; same as %_d
+		  %F   full date; same as %Y-%m-%d
+		  %g   last two digits of year of ISO week number (see %G)
+		  %G   year of ISO week number (see %V); normally useful only with %V
+		  %h   same as %b
+		  %H   hour (00..23)
+		  %I   hour (01..12)
+		  %j   day of year (001..366)
+		  %k   hour, space padded ( 0..23); same as %_H
+		  %l   hour, space padded ( 1..12); same as %_I
+		  %m   month (01..12)
+		  %M   minute (00..59)
+		  %n   a newline
+		  %N   nanoseconds (000000000..999999999)
+		  %p   locale's equivalent of either AM or PM; blank if not known
+		  %P   like %p, but lower case
+		  %q   quarter of year (1..4)
+		  %r   locale's 12-hour clock time (e.g., 11:11:04 PM)
+		  %R   24-hour hour and minute; same as %H:%M
+		  %s   seconds since 1970-01-01 00:00:00 UTC
+		  %S   second (00..60)
+		  %t   a tab
+		  %T   time; same as %H:%M:%S
+		  %u   day of week (1..7); 1 is Monday
+		  %U   week number of year, with Sunday as first day of week (00..53)
+		  %V   ISO week number, with Monday as first day of week (01..53)
+		  %w   day of week (0..6); 0 is Sunday
+		  %W   week number of year, with Monday as first day of week (00..53)
+		  %x   locale's date representation (e.g., 12/31/99)
+		  %X   locale's time representation (e.g., 23:13:48)
+		  %y   last two digits of year (00..99)
+		  %Y   year
+		  %z   +hhmm numeric time zone (e.g., -0400)
+		  %:z  +hh:mm numeric time zone (e.g., -04:00)
+		  %::z  +hh:mm:ss numeric time zone (e.g., -04:00:00)
+		  %:::z  numeric time zone with : to necessary precision (e.g., -04, +05:30)
+		  %Z   alphabetic time zone abbreviation (e.g., EDT)
+
+		By default, date pads numeric fields with zeroes.
+		The following optional flags may follow '%':
+
+		  -  (hyphen) do not pad the field
+		  _  (underscore) pad with spaces
+		  0  (zero) pad with zeros
+		  ^  use upper case if possible
+		  #  use opposite case if possible
+
+		After any flags comes an optional field width, as a decimal number;
+		then an optional modifier, which is either
+		E to use the locale's alternate representations if available, or
+		O to use the locale's alternate numeric symbols if available.
+
+		Examples:
+		Convert seconds since the epoch (1970-01-01 UTC) to a date
+		  $ date --date='@2147483647'
+
+		Show the time on the west coast of the US (use tzselect(1) to find TZ)
+		  $ TZ='America/Los_Angeles' date
+
+		Show the local time for 9AM next Friday on the west coast of the US
+		  $ date --date='TZ="America/Los_Angeles" 09:00 next Fri'  
+time -b Enter ->real	0m0.388s
+		user	0m0.089s
+		sys	0m0.058s
+UNAME -a ENTER ->Linux user 4.13.0-21-generic #24-Ubuntu SMP Mon Dec 18 17:29:16 UTC 2017 x86_64 				x86_64 x86_64 GNU/Linux
+
+
