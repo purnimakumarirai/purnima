@@ -1,0 +1,44 @@
+1. Write a shell script to display current time and date using data command.
+
+
+now="(date)"
+now="$(date +'%d/%m/%Y')"
+echo "\n date $now "
+now=$(date +"%T")
+echo "Current time : $now"
+~ 
+
+
+
+2. write a shell script to check weather a given number is positive or negative.
+
+
+echo "Enter a Number:"
+read n
+if [ $n -ge 0 ]
+then
+            echo "Number is positive"
+    else    echo "Number is Negative"
+    fi
+
+
+
+
+3.write a shell script to display students grade.
+
+
+echo "enter marks\n"
+read x
+if [ $x -gt 90 ]
+then echo " grade- A"
+else if [ $x -gt 80 ]
+then echo "grade- B "
+else if [ $x -gt 70 ]
+then echo"grade- C "    
+else if [ $x -gt 60 ]
+then echo "grade- D "
+else echo "FAIL"
+fi
+fi
+fi
+~ 

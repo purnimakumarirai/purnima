@@ -1,0 +1,199 @@
+Today's lab session (3):
+
+FILTER COMMANDS:
+
+HEAD:
+
+cs2016a206@user:~/purnima$ head -n 6 csea2_user.csv
+USN number,Name,Reg. No
+1,Adam,16001
+2,Ben,16002
+3,Cathy,16003
+4,Dom,16004
+5,Elen,16005
+
+cs2016a206@user:~/purnima$ head -c 15 csea2_user.csv
+USN number,Name
+
+TAIL:
+
+cs2016a206@user:~/purnima$ tail -n 3 csea2_user.csv
+13,missa,16013
+14,nani,16014
+15,olive,16015
+
+SORT:
+
+
+cs2016a206@user:~/purnima$ sort csea2_user.csv
+10,John,16010
+11,korin,16011
+12,Lannister,16012
+13,missa,16013
+14,nani,16014
+15,olive,16015
+1,Adam,16001
+2,Ben,16002
+3,Cathy,16003
+4,Dom,16004
+5,Elen,16005
+6,Farooq,16006
+7,Gal,16007
+8,Harry,16008
+9,Inam,16009
+USN number,Name,Reg. No
+
+
+cs2016a206@user:~/purnima$ sort -r csea2_user.csv
+USN number,Name,Reg. No
+9,Inam,16009
+8,Harry,16008
+7,Gal,16007
+6,Farooq,16006
+5,Elen,16005
+4,Dom,16004
+3,Cathy,16003
+2,Ben,16002
+1,Adam,16001
+15,olive,16015
+14,nani,16014
+13,missa,16013
+12,Lannister,16012
+11,korin,16011
+10,John,16010
+
+
+UNIQ:
+
+cs2016a206@user:~/purnima$ uniq csea2_user.csv
+USN number,Name,Reg. No
+1,Adam,16001
+2,Ben,16002
+3,Cathy,16003
+4,Dom,16004
+5,Elen,16005
+6,Farooq,16006
+7,Gal,16007
+8,Harry,16008
+9,Inam,16009
+10,John,16010
+11,korin,16011
+12,Lannister,16012
+13,missa,16013
+14,nani,16014
+15,missa,16015
+
+
+cs2016a206@user:~/purnima$ uniq -c csea2_user.csv
+      1 USN number,Name,Reg. No
+      1 1,Adam,16001
+      1 2,Ben,16002
+      1 3,Cathy,16003
+      1 4,Dom,16004
+      1 5,Elen,16005
+      1 6,Farooq,16006
+      1 7,Gal,16007
+      1 8,Harry,16008
+      1 9,Inam,16009
+      1 10,John,16010
+      1 11,korin,16011
+      1 12,Lannister,16012
+      1 13,missa,16013
+      1 14,nani,16014
+      1 15,missa,16015
+
+WC:
+
+cs2016a206@user:~/purnimsa$ wc csea2_suer.csv
+ 16  18 234 csea2_user.csv
+
+cs2016a206@user:~/purnima$ wc -l csea2_user.csv
+16 csea2_user.csv
+
+cs2016a206@user:~/purnima$ wc -c csea2_user.csv
+234 csea2_user.csv
+
+CUT:
+
+cs2016a206@user:~/purnima$ cut -d " " -f 2 csea2_user.csv
+number,Name,Reg.
+1,Adam,16001
+2,Ben,16002
+3,Cathy,16003
+4,Dom,16004
+5,Elen,16005
+6,Farooq,16006
+7,Gal,16007
+8,Harry,16008
+9,Inam,16009
+10,John,16010
+11,korin,16011
+12,Lannister,16012
+13,missa,16013
+14,nani,16014
+15,missa,16015
+
+CAT: concatenates 2 files (my second files contained the "16 purnima 16016"
+
+cs2016a206@user:~/purnima$ cat -A csea2_user.csv cse2.csv
+USN number,Name,Reg. No$
+1,Adam,16001$
+2,Ben,16002$
+3,Cathy,16003$
+4,Dom,16004$
+5,Elen,16005$
+6,Farooq,16006$
+7,Gal,16007$
+8,Harry,16008$
+9,Inam,16009$
+10,John,16010$
+11,korin,16011$
+12,Lannister,16012$
+13,missa,16013$
+14,nani,16014$
+15,missa,16015$
+16,prajwal,16016$
+
+
+PASTE:
+
+(my second files contained "16 purnima 16016")
+
+cs2016a206@user:~/purnima$ paste csea2_user.csv cse2.csv
+USN number,Name,Reg. No	16,purnima,16016
+1,Adam,16001	
+2,Ben,16002	
+3,Cathy,16003	
+4,Dom,16004	
+5,Elen,16005	
+6,Farooq,16006	
+7,Gal,16007	
+8,Harry,16008	
+9,Inam,16009	
+10,John,16010	
+11,korin,16011	
+12,Lannister,16012	
+13,missa,16013	
+14,nani,16014	
+15,missa,16015	
+
+
+1) display third column of csea.csv without printing the heade "cgpa" also sort the same
+answer :
+cs2016a206@user:~/purnima$ cut -d , -f 3 csea2_user.csv|sort|grep -v "CGPA"
+10
+3.2
+4.4
+4.6
+5.2
+6.6
+7.4
+8.7
+8.9
+9
+9.2
+9.3
+9.5
+9.8
+9.9
+

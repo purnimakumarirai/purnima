@@ -1,0 +1,857 @@
+Total commands are
+1. who
+2. ls
+3. cal
+4. bc
+5. date
+6. time 
+7. uname
+
+
+1. who
+
+Synopsis : who [option]... [FILE  | ARG1 ARG2 ]
+
+DESCRIPITION : print information about users who are currently logged in.
+
+OPTIONS  
+
+* -a, --all
+         same as -b -d --login -p -r -t -T -u
+
+* -b, --boot
+        time of the last system boot
+
+* -d, --dead
+              print dead processes
+
+* -H, --heading
+              print line of column headings
+
+* --ips  print ips instead of hostnames. with --lookup, canonicalizes based
+              on stored IP, if available, rather than stored hostname
+
+* -l, --login
+              print system login processes
+
+* --lookup
+              attempt to canonicalize hostnames via DNS
+
+* -m     only hostname and user associated with stdin
+
+* -p, --process
+              print active processes spawned by init
+
+* -q, --count
+              all login names and number of users logged on
+
+* -r, --runlevel
+              print current runlevel
+
+* -s, --short
+              print only name, line, and time (default)
+
+* -t, --time
+              print last system clock change
+
+* -T, -w, --mesg
+              add user's message status as +, - or ?
+
+* -u, --users
+              list users logged in
+
+* --message
+              same as -T
+
+* --writable
+              same as -T
+
+* --help display this help and exit
+
+* --version
+              output version information and exit
+
+
+
+
+2. ls
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about  the FILEs (the current directory by default).
+       Sort entries alphabetically if none of -cftuvSUX nor --sort  is  speci‐
+       fied.
+
+       Mandatory  arguments  to  long  options are mandatory for short options
+       too.
+
+*  -a, --all
+              do not ignore entries starting with .
+
+*  -A, --almost-all
+              do not list implied . and ..
+
+*  --author
+              with -l, print the author of each file
+
+*  -b, --escape
+              print C-style escapes for nongraphic characters
+
+*  --block-size=SIZE
+              scale sizes by SIZE before printing them; e.g., '--block-size=M'
+              prints sizes in units of 1,048,576 bytes; see SIZE format below
+
+*  -B, --ignore-backups
+              do not list implied entries ending with ~
+
+*  -c     with -lt: sort by, and show, ctime (time of last modification of
+              file status information); with -l: show ctime and sort by  name;
+              otherwise: sort by ctime, newest first
+
+*  -C     list entries by column
+   
+*    --color[=WHEN]
+              colorize  the output; WHEN can be 'always' (default if omitted),
+              'auto', or 'never'; more info below
+
+*       -d, --directory
+              list directories themselves, not their contents
+
+*       -D, --dired
+              generate output designed for Emacs' dired mode
+
+*       -f     do not sort, enable -aU, disable -ls --color
+
+    *      -F, --classify
+              append indicator (one of */=>@|) to entries
+
+    *     --file-type
+              likewise, except do not append '*'
+
+    *    --format=WORD
+              across -x, commas -m, horizontal -x, long -l, single-column  -1,
+              verbose -l, vertical -C
+
+    *   --full-time
+              like -l --time-style=full-iso
+
+    *  -g     like -l, but do not list owner
+
+    * --group-directories-first
+              group directories before files;
+
+              can   be  augmented  with  a  --sort  option,  but  any  use  of
+              --sort=none (-U) disables grouping
+
+    *     -G, --no-group
+              in a long listing, don't print group names
+
+    *    -h, --human-readable
+              with -l and/or -s, print human readable sizes (e.g., 1K 234M 2G)
+
+    *   --si   likewise, but use powers of 1000 not 1024
+
+    *  -H, --dereference-command-line
+              follow symbolic links listed on the command line
+
+    *     --dereference-command-line-symlink-to-dir
+              follow each command line symbolic link
+
+              that points to a directory
+
+    *    --hide=PATTERN
+              do not list implied entries matching shell  PATTERN  (overridden
+              by -a or -A)
+
+    *    --indicator-style=WORD
+              append indicator with style WORD to entry names: none (default),
+              slash (-p), file-type (--file-type), classify (-F)
+
+    *   -i, --inode
+              print the index number of each file
+
+    *     -I, --ignore=PATTERN
+              do not list implied entries matching shell PATTERN
+
+    *    -k, --kibibytes
+              default to 1024-byte blocks for disk usage
+
+    *   -l     use a long listing format
+
+    *   -L, --dereference
+              when showing file information for a symbolic link, show informa‐
+              tion  for  the file the link references rather than for the link
+              itself
+
+    *  -m     fill width with a comma separated list of entries
+
+    *   -n, --numeric-uid-gid
+              like -l, but list numeric user and group IDs
+
+    *    -N, --literal
+              print entry names without quoting
+
+    *   -o     like -l, but do not list group information
+
+    *   -p, --indicator-style=slash
+              append / indicator to directories
+
+    *    -q, --hide-control-chars
+               print ? instead of nongraphic characters
+
+    *   --show-control-chars
+              show nongraphic characters as-is (the default, unless program is
+              'ls' and output is a terminal)
+
+    *   -Q, --quote-name
+              enclose entry names in double quotes
+
+    *   --quoting-style=WORD
+              use  quoting style WORD for entry names: literal, locale, shell,
+              shell-always, shell-escape, shell-escape-always, c, escape
+
+    *    -r, --reverse
+              reverse order while sorting
+
+    *    -R, --recursive
+              list subdirectories recursively
+
+    *   -s, --size
+              print the allocated size of each file, in blocks
+
+    *    -S     sort by file size, largest first
+
+    *   --sort=WORD
+              sort by WORD instead of name: none (-U), size (-S),  time  (-t),
+              version (-v), extension (-X)
+
+    *   --time=WORD
+              with -l, show time as WORD instead of default modification time:
+              atime or access or use (-u); ctime  or  status  (-c);  also  use
+              specified time as sort key if --sort=time (newest first)
+    *  --time-style=STYLE
+              with  -l, show times using style STYLE: full-iso, long-iso, iso,
+              locale, or +FORMAT; FORMAT is interpreted  like  in  'date';  if
+              FORMAT  is  FORMAT1<newline>FORMAT2,  then  FORMAT1  applies  to
+              non-recent files and FORMAT2 to recent files; if STYLE  is  pre‐
+              fixed  with  'posix-', STYLE takes effect only outside the POSIX
+              locale
+
+    *   -t     sort by modification time, newest first
+
+    *  -T, --tabsize=COLS
+              assume tab stops at each COLS instead of 8
+ 
+    *    -u     with -lt: sort by, and show, access time; with -l:  show  access
+              time  and  sort  by name; otherwise: sort by access time, newest
+              first
+
+    *   -U     do not sort; list entries in directory order
+
+    *  -v     natural sort of (version) numbers within text
+
+    *   -w, --width=COLS
+              set output width to COLS.  0 means no limit
+
+    *  -x     list entries by lines instead of by columns
+ 
+    *    -X     sort alphabetically by entry extension
+
+    *    -Z, --context
+              print any security context of each file
+
+    *   -1     list one file per line.  Avoid '\n' with -q or -b
+
+    *   --help display this help and exit
+
+    *  --version
+              output version information and exit
+
+3. cal
+
+
+SYNOPSIS
+     cal [-31jy] [-A number] [-B number] [-d yyyy-mm] [[month] year]
+     cal [-31j] [-A number] [-B number] [-d yyyy-mm] -m month [year]
+     ncal [-C] [-31jy] [-A number] [-B number] [-d yyyy-mm] [[month] year]
+     ncal [-C] [-31j] [-A number] [-B number] [-d yyyy-mm] -m month [year]
+     ncal [-31bhjJpwySM] [-A number] [-B number] [-H yyyy-mm-dd] [-d yyyy-mm]
+         [-s country_code] [[month] year]
+     ncal [-31bhJeoSM] [-A number] [-B number] [-d yyyy-mm] [year]
+
+DESCRIPTION
+     The cal utility displays a simple calendar in traditional format and ncal
+     offers an alternative layout, more options and the date of Easter.  The
+     new format is a little cramped but it makes a year fit on a 25x80 termi‐
+     nal.  If arguments are not specified, the current month is displayed.
+
+
+The options are as follows:
+
+     -h      Turns off highlighting of today.
+
+     -J      Display Julian Calendar, if combined with the -o option, display
+             date of Orthodox Easter according to the Julian Calendar.
+
+     -e      Display date of Easter (for western churches).
+
+     -j      Display Julian days (days one-based, numbered from January 1).
+
+  -m month
+             Display the specified month.  If month is specified as a decimal
+             number, appending ‘f’ or ‘p’ displays the same month of the fol‐
+             lowing or previous year respectively.
+
+     -o      Display date of Orthodox Easter (Greek and Russian Orthodox
+             Churches).
+
+     -p      Print the country codes and switching days from Julian to Grego‐
+             rian Calendar as they are assumed by ncal.  The country code as
+             determined from the local environment is marked with an asterisk.
+
+     -s country_code
+             Assume the switch from Julian to Gregorian Calendar at the date
+             associated with the country_code.  If not specified, ncal tries
+             to guess the switch date from the local environment or falls back
+             to September 2, 1752.  This was when Great Britain and her
+             colonies switched to the Gregorian Calendar.
+
+ -y      Display a calendar for the specified year. This option is implied
+             when a year but no month are specified on the command line.
+
+     -3      Display the previous, current and next month surrounding today.
+
+     -1      Display only the current month. This is the default.
+
+     -A number
+             Months to add after. The specified number of months is added to
+             the end of the display. This is in addition to any date range
+             selected by the -y, -3, or -1 options. For example, “cal -y -B2
+             -A2” shows everything from November of the previous year to Feb‐
+             ruary of the following year. Negative numbers are allowed, in
+             which case the specified number of months is subtracted. For
+             example, “cal -y -B-6” shows July to December. And “cal -A11”
+             simply shows the next 12 months.
+
+     -B number
+             Months to add before. The specified number of months is added to
+             the beginning of the display. See -A for examples.
+
+
+  -C      Completely switch to cal mode. For cal like output only, use -b
+             instead.
+
+     -N      Switch to ncal mode.
+
+     -d yyyy-mm
+             Use yyyy-mm as the current date (for debugging of date selec‐
+             tion).
+
+     -H yyyy-mm-dd
+             Use yyyy-mm-dd as the current date (for debugging of highlight‐
+             ing).
+
+     -M      Weeks start on Monday.
+
+     -S      Weeks start on Sunday.
+
+     -b      Use oldstyle format for ncal output.
+
+
+   A single parameter specifies the year (1–9999) to be displayed; note the
+     year must be fully specified: “cal 89” will not display a calendar for
+     1989.  Two parameters denote the month and year; the month is either a
+     number between 1 and 12, or a full or abbreviated name as specified by
+     the current locale.  Month and year default to those of the current sys‐
+     tem clock and time zone (so “cal -m 8” will display a calendar for the
+     month of August in the current year).
+
+     Not all options can be used together. For example, the options -y, -3,
+     and -1 are mutually exclusive. If inconsistent options are given, the
+     later ones take precedence over the earlier ones.
+
+     A year starts on January 1.
+
+
+4. bc
+
+
+SYNTAX
+       bc [ -hlwsqv ] [long-options] [  file ... ]
+
+DESCRIPTION
+       bc  is a language that supports arbitrary precision numbers with inter‐
+       active execution of statements.  There are  some  similarities  in  the
+       syntax  to  the  C  programming  language.   A standard math library is
+       available by command line option.  If requested, the  math  library  is
+       defined before processing any files.  bc starts by processing code from
+       all the files listed on the command line in the  order  listed.   After
+       all  files  have been processed, bc reads from the standard input.  All
+       code is executed as it is read.  (If a file contains a command to  halt
+       the processor, bc will never read from the standard input.)
+
+       This  version  of  bc contains several extensions beyond traditional bc
+       implementations and the POSIX draft standard.  Command line options can
+       cause these extensions to print a warning or to be rejected.  This doc‐
+       ument describes the language accepted by  this  processor.   Extensions
+       will be identified as such.
+
+   OPTIONS
+       -h, --help
+              Print the usage and exit.
+
+       -i, --interactive
+              Force interactive mode.
+
+       -l, --mathlib
+              Define the standard math library.
+
+       -w, --warn
+              Give warnings for extensions to POSIX bc.
+
+       -s, --standard
+              Process exactly the POSIX bc language.
+
+       -q, --quiet
+              Do not print the normal GNU bc welcome.
+
+       -v, --version
+              Print the version number and copyright and quit.
+
+
+       - expr The result is the negation of the expression.
+
+       ++ var The variable is incremented by one and  the  new  value  is  the
+              result of the expression.
+
+       -- var The  variable  is  decremented  by  one and the new value is the
+              result of the expression.
+
+       var ++
+               The result of the expression is the value of the  variable  and
+              then the variable is incremented by one.
+
+       var -- The  result  of  the expression is the value of the variable and
+              then the variable is decremented by one.
+
+       expr + expr
+              The result of the expression is the sum of the two expressions.
+
+       expr - expr
+              The result of the  expression  is  the  difference  of  the  two
+              expressions.
+
+       expr * expr
+              The  result  of the expression is the product of the two expres‐
+              sions.
+
+       expr / expr
+                The result of the expression is the quotient of the two  expres‐
+              sions.   The  scale  of  the result is the value of the variable
+              scale.
+
+       expr % expr
+              The result of the expression is the "remainder" and it  is  com‐
+              puted  in  the following way.  To compute a%b, first a/b is com‐
+              puted to scale digits.  That result is used to compute a-(a/b)*b
+              to  the scale of the maximum of scale+scale(b) and scale(a).  If
+              scale is set to zero and  both  expressions  are  integers  this
+              expression is the integer remainder function.
+
+
+        expr ^ expr
+              The result of the expression is the value of the first raised to
+              the second.  The second expression must be an integer.  (If  the
+              second  expression is not an integer, a warning is generated and
+              the expression is truncated to get an integer value.)  The scale
+              of  the  result  is  scale  if the exponent is negative.  If the
+              exponent is positive the scale of the result is the  minimum  of
+              the  scale  of the first expression times the value of the expo‐
+              nent and the maximum of scale and the scale of the first expres‐
+              sion.    (e.g.   scale(a^b)   =   min(scale(a)*b,   max(  scale,
+              scale(a))).)  It should be noted that expr^0 will always  return
+              the value of 1.
+
+       ( expr )
+              This  alters  the standard precedence to force the evaluation of
+              the expression.
+
+       var = expr
+              The variable is assigned the value of the expression.
+
+        var <op>= expr
+              This is equivalent to "var = var <op> expr" with  the  exception
+              that  the  "var"  part  is evaluated only once.  This can make a
+              difference if "var" is an array.
+
+       Relational expressions are a special kind  of  expression  that  always
+       evaluate to 0 or 1, 0 if the relation is false and 1 if the relation is
+       true.  These may appear in any legal expression.   (POSIX  bc  requires
+       that  relational expressions are used only in if, while, and for state‐
+       ments and that only one relational test may  be  done  in  them.)   The
+       relational operators are
+
+       expr1 < expr2
+              The result is 1 if expr1 is strictly less than expr2.
+
+       expr1 <= expr2
+              The result is 1 if expr1 is less than or equal to expr2.
+
+       expr1 < expr2
+              The result is 1 if expr1 is strictly less than expr2.
+
+       expr1 <= expr2
+              The result is 1 if expr1 is less than or equal to expr2.
+
+       expr1 > expr2
+              The result is 1 if expr1 is strictly greater than expr2.
+
+       expr1 >= expr2
+              The result is 1 if expr1 is greater than or equal to expr2.
+
+       expr1 == expr2
+              The result is 1 if expr1 is equal to expr2.
+
+       expr1 != expr2
+              The result is 1 if expr1 is not equal to expr2.
+
+      Boolean  operations  are  also  legal.  (POSIX bc does NOT have boolean
+       operations).  The result of all boolean operations are  0  and  1  (for
+       false  and  true)  as in relational expressions.  The boolean operators
+       are:
+
+       !expr  The result is 1 if expr is 0.
+
+       expr && expr
+              The result is 1 if both expressions are non-zero.
+
+       expr || expr
+              The result is 1 if either expression is non-zero.
+
+       The expression precedence is as follows: (lowest to highest)
+                 || operator, left associative
+              && operator, left associative
+              ! operator, nonassociative
+              Relational operators, left associative
+              Assignment operator, right associative
+              + and - operators, left associative
+              *, / and % operators, left associative
+              ^ operator, right associative
+              unary - operator, nonassociative
+              ++ and -- operators, nonassociative
+
+       This precedence was chosen so that POSIX compliant bc programs will run
+       correctly.  This will cause the use of the relational and logical oper‐
+       ators to have some unusual behavior when used with  assignment  expres‐
+       sions.  Consider the expression:
+          a = 3 < 5
+
+       Most C programmers would assume this would assign the result of "3 < 5"
+       (the value 1) to the variable "a".  What this does in bc is assign  the
+       value 3 to the variable "a" and then compare 3 to 5.  It is best to use
+       parenthesis when  using  relational  and  logical  operators  with  the
+       assignment operators.
+
+       There  are  a  few  more  special  expressions that are provided in bc.
+       These have to do with user defined functions  and  standard  functions.
+       They  all  appear  as "name(parameters)".  See the section on functions
+       for user defined functions.  The standard functions are:
+
+       length ( expression )
+              The value of the length function is the  number  of  significant
+ 
+
+
+
+
+
+
+
+
+
+
+5. date
+
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       --debug
+              annotate  the  parsed  date,  and warn about questionable usage to
+              stderr
+
+       -f, --file=DATEFILE
+              like --date; once for each line of DATEFILE
+
+       -I[FMT], --iso-8601[=FMT]
+              output date/time in ISO 8601 format.   FMT='date'  for  date  only
+              (the default), 'hours', 'minutes', 'seconds', or 'ns' for date and
+              time     to      the      indicated      precision.       Example:
+              2006-08-14T02:34:56-06:00
+
+       -R, --rfc-2822
+              output  date  and  time  in RFC 2822 format.  Example: Mon, 14 Aug
+              2006 02:34:56 -0600
+
+       --rfc-3339=FMT
+              output date/time in RFC 3339 format.   FMT='date',  'seconds',  or
+              'ns'  for  date  and  time  to  the indicated precision.  Example:
+              2006-08-14 02:34:56-06:00
+
+       -r, --reference=FILE
+              display the last modification time of FILE
+
+       -s, --set=STRING
+              set time described by STRING
+
+       -u, --utc, --universal
+              print or set Coordinated Universal Time (UTC)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output.  Interpreted sequences are:
+
+       %%     a literal %
+
+       %a     locale's abbreviated weekday name (e.g., Sun)
+
+       %A     locale's full weekday name (e.g., Sunday)
+
+       %b     locale's abbreviated month name (e.g., Jan)
+
+       %B     locale's full month name (e.g., January)
+
+       %c     locale's date and time (e.g., Thu Mar  3 23:05:25 2005)
+
+       %C     century; like %Y, except omit last two digits (e.g., 20)
+
+       %d     day of month (e.g., 01)
+
+       %D     date; same as %m/%d/%y
+
+       %e     day of month, space padded; same as %_d
+
+       %F     full date; same as %Y-%m-%d
+
+       %g     last two digits of year of ISO week number (see %G)
+
+       %G     year of ISO week number (see %V); normally useful only with %V
+
+       %h     same as %b
+
+       %H     hour (00..23)
+
+       %I     hour (01..12)
+
+       %j     day of year (001..366)
+
+       %k     hour, space padded ( 0..23); same as %_H
+
+       %l     hour, space padded ( 1..12); same as %_I
+
+       %m     month (01..12)
+
+       %M     minute (00..59)
+
+       %n     a newline
+
+       %N     nanoseconds (000000000..999999999)
+
+       %p     locale's equivalent of either AM or PM; blank if not known
+
+       %P     like %p, but lower case
+
+       %q     quarter of year (1..4)
+
+       %r     locale's 12-hour clock time (e.g., 11:11:04 PM)
+
+       %R     24-hour hour and minute; same as %H:%M
+
+       %s     seconds since 1970-01-01 00:00:00 UTC
+
+       %S     second (00..60)
+
+       %t     a tab
+
+       %T     time; same as %H:%M:%S
+
+
+      %u     day of week (1..7); 1 is Monday
+
+       %U     week number of year, with Sunday as first day of week (00..53)
+
+       %V     ISO week number, with Monday as first day of week (01..53)
+
+       %w     day of week (0..6); 0 is Sunday
+
+       %W     week number of year, with Monday as first day of week (00..53)
+
+       %x     locale's date representation (e.g., 12/31/99)
+
+       %X     locale's time representation (e.g., 23:13:48)
+
+       %y     last two digits of year (00..99)
+
+       %Y     year
+
+       %z     +hhmm numeric time zone (e.g., -0400)
+
+       %:z    +hh:mm numeric time zone (e.g., -04:00)
+
+       %::z   +hh:mm:ss numeric time zone (e.g., -04:00:00)
+
+       %:::z  numeric  time  zone  with  :  to necessary precision (e.g., -04,
+              +05:30)
+
+       %Z     alphabetic time zone abbreviation (e.g., EDT)
+
+       By default, date  pads  numeric  fields  with  zeroes.   The  following
+       optional flags may follow '%':
+
+       -      (hyphen) do not pad the field
+
+       _      (underscore) pad with spaces
+
+       0      (zero) pad with zeros
+
+       ^      use upper case if possible
+
+       #      use opposite case if possible
+
+
+
+
+
+
+
+
+
+
+
+
+6 time
+
+
+
+SYNOPSIS
+       time   [ -apqvV ] [ -f FORMAT ] [ -o FILE ]
+              [ --append ] [ --verbose ] [ --quiet ] [ --portability ]
+              [ --format=FORMAT ] [ --output=FILE ] [ --version ]
+              [ --help ] COMMAND [ ARGS ]
+
+DESCRIPTION
+       time run the program COMMAND with any given arguments ARG....  When
+       COMMAND finishes, time displays information about resources used by
+       COMMAND (on the standard error output, by default).  If COMMAND exits
+       with non-zero status, time displays a warning message and the exit
+       status.
+
+       time determines which information to display about the resources used by
+       the COMMAND from the string FORMAT.  If no format is specified on the
+       command line, but the TIME environment variable is set, its value is used
+       as the format.  Otherwise, a default format built into time is used.
+
+       Options to time must appear on the command line before COMMAND.  Anything
+       on the command line after COMMAND is passed as arguments to COMMAND.
+
+OPTIONS
+       -o FILE, --output=FILE
+              Write the resource use statistics to FILE instead of to the
+              standard error stream.  By default, this overwrites the file,
+              destroying the file's previous contents.  This option is useful
+              for collecting information on interactive programs and programs
+              that produce output on the standard error stream.
+
+       -a, --append
+              Append the resource use information to the output file instead of
+              overwriting it.  This option is only useful with the `-o' or
+              `--output' option.
+
+       -f FORMAT, --format FORMAT
+              Use FORMAT as the format string that controls the output of time.
+              See the below more information.
+
+  --help Print a summary of the command line options and exit.
+
+       -p, --portability
+              Use the following format string, for conformance with POSIX
+              standard 1003.2:
+                        real %e
+                        user %U
+                        sys %S
+
+       -v, --verbose
+              Use the built-in verbose format, which displays each available
+              piece of information on the program's resource use on its own
+              line, with an English description of its meaning.
+
+       --quiet
+              Do not report the status of the program even if it is different
+              from zero.
+
+       -V, --version
+              Print the version number of time and exit.
+
+ 
+
+
+
+
+
+
+7. uname
+
+
+
+SYNOPSIS
+       uname [OPTION]...
+
+DESCRIPTION
+       Print certain system information.  With no OPTION, same as -s.
+
+       -a, --all
+              print  all information, in the following order, except omit -p and
+              -i if unknown:
+
+       -s, --kernel-name
+              print the kernel name
+
+       -n, --nodename
+              print the network node hostname
+
+       -r, --kernel-release
+              print the kernel release
+
+       -v, --kernel-version
+              print the kernel version
+
+       -m, --machine
+              print the machine hardware name
+
+       -p, --processor
+              print the processor type (non-portable)
+
+       -i, --hardware-platform
+              print the hardware platform (non-portable)
+
+       -o, --operating-system
+              print the operating system
+
+       --help display this help and exit
+
+       --version
+output version information and exit
