@@ -1,0 +1,33 @@
+          // DEVELOPING UNIX SHELL PROGRAM FOR PASSWORD //
+
+
+echo "Enter username"
+read username
+if [ $username = "purnima" ]
+then
+         echo Enter password
+          read password
+          case $username in
+                   purnima ) pass=dtfc;;
+                    Rick ) pass=unpo
+            esac
+            while [ "$password" != "$pass" ]; do
+                     echo "Wrong password!"
+                      return 1
+              done
+              echo "You are logged in!" 
+              return 0
+      else
+               echo "Login name not recognized"
+       fi
+       return 2
+
+
+
+
+
+out/put:Enter username
+	purnima
+	Enter password
+	dtfc
+	yor are logged in! 
