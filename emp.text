@@ -1,0 +1,26 @@
+NAME/GENDER/POST 
+
+
+kapil ,male, CEO
+sunil,male,IT
+kikku,male,SE
+bharti,female,MANAGER
+harse,male,IT
+sukla,male,CS
+munnabhai,male,CS
+titu,male,CS
+akon,male,IT
+rocky,male,IT
+pranu,male,SE
+
+
+
+output:
+sed -n '/CEO/p' emp.text
+Kapil ,male, CEO
+ 
+sed -n '/CS/p' emp.text
+sukla,male,CS
+munnabhai,male,CS
+titu,male,CS
+
