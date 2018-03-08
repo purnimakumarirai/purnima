@@ -1,0 +1,31 @@
+cs2016a212@user:~$ midir emp
+No command 'midir' found, did you mean:
+ Command 'mkdir' from package 'coreutils' (main)
+ Command 'mmdir' from package 'simh' (universe)
+ Command 'vidir' from package 'moreutils' (universe)
+ Command 'mdir' from package 'mtools' (main)
+ Command 'midid' from package 'dosemu' (multiverse)
+midir: command not found
+cs2016a212@user:~$ mkdir emp
+cs2016a212@user:~$ cd emp
+cs2016a212@user:~/emp$ vim emp.list
+cs2016a212@user:~/emp$ cat emp.list
+
+anil kumar|ceo|500000|senior|1407-6666-324
+panjuk|ceo|1000000|hod|1736-6737-237
+aadya|500000|manager|3435223333
+purnima|6000000|ceo|7126383888
+pooja|5000000|employee|9737678233
+sapna|40000000|manager|9966435333
+cs2016a212@user:~/emp$ sed -n '$p' emp.list
+sapna|40000000|manager|9966435333
+cs2016a212@user:~/emp$ sed -n '1,2!p' emp.list
+panjuk|ceo|1000000|hod|1736-6737-237
+aadya|500000|manager|3435223333
+purnima|6000000|ceo|7126383888
+pooja|5000000|employee|9737678233
+sapna|40000000|manager|9966435333
+cs2016a212@user:~/emp$ 
+cs2016a212@user:~/emp$  vim emp.list
+cs2016a212@user:~/emp$  
+
