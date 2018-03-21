@@ -1,0 +1,99 @@
+Excersice 7
+
+1.Print only the odd numbered lines of a file
+
+$ awk 'NR%2!=0' emp1.lst
+
+Emp_id|Name|Designation|Salary|Department
+1002|Bru|staff|59000|Marketing
+1004|Dabu|Director|80000|Accounts
+1006|Navu|Director|80000|Accounts
+1008|Basu|Staff|60000|Sales
+1010|Anu|CE0|90000|Accounts
+
+
+2.Write a awk command to print the last field without knowing the number of feild lines
+
+$ awk -F "|" '{print $(NF)}' emp1.lst
+
+Department
+Accounts
+Marketing
+Sales
+Accounts
+sales
+Accounts
+Marketing
+Sales
+Marketing
+Accounts
+
+3.Equivalent awk command for the following
+
+a.$ head -n 5 emp1.lst
+
+$ awk -F "|" 'NR==1,NR==5{print}' emp1.lst
+
+Emp_id|Name|Designation|Salary|Department
+1001|Aish|Manager|70000|Accounts
+1002|Bri|staff|59000|Marketing
+1003|Anu|Head_staff|50000|Sales
+1004|Dabu|Director|80000|Accounts
+
+b.$ tail +6 emp1.lst
+
+$ awk -F "|" 'NR==6,NR==11{print}' emp1.lst
+
+1005|Mahi|Manager|70000|sales
+1006|Navu|Director|80000|Accounts
+1007|Arun|Staff   |60000|Marketing
+1008|Basu|Staff|60000|Sales
+1009|Seni|Staff|59000|Marketing
+1010|Anu|CE0|90000|Accounts
+
+c.$ sed -n '5,10p' emp1.lst
+
+$ awk -F "|" 'NR==5,NR==10{print}' emp1.lst
+
+1004|David|Director|80000|Accounts
+1005|Mahi|Manager|70000|sales
+1006|Navu|Director|80000|Accounts
+1007|Arun|Staff   |60000|Marketing
+1008|Basu|Staff|60000|Sales
+1009|Seni|Staff|59000|Marketing
+
+4.Write a awk command to delete all blank lines
+ 
+Before the execution of the awk command
+
+Emp_id|Name|Designation|Salary|Department
+1001|Aish|Manager|70000|Accounts
+1002|Bru|staff|59000|Marketing
+1003|Anu|Head_staff|50000|Sales
+1004|Davu|Director|80000|Accounts
+1005|Mahi|Manager|70000|sales
+1006|Navu|Director|80000|Accounts
+|60000|Marketing
+
+
+
+
+1008|Basu|Staff|60000|Sales
+1009|Seni|Staff|59000|Marketing
+1010|Anu|CE0|90000|Accounts
+
+$ awk 'NF' emp1.lst
+
+After the execution of the awk command
+
+Emp_id|Name|Designation|Salary|Department
+1001|Aish|Manager|70000|Accounts
+1002|Bru|staff|59000|Marketing
+1003|Anu|Head_staff|50000|Sales
+1004|Davu|Director|80000|Accounts
+1005|Mahi|Manager|70000|sales
+1006|Navu|Director|80000|Accounts
+|60000|Marketing
+1008|Basu|Staff|60000|Sales
+1009|Sendhil|Staff|59000|Marketing
+1010|Anu|CE0|90000|Accounts
