@@ -1,0 +1,16 @@
+Syntax:
+
+tar [options] [archive-file] [file or directory to be archived]
+
+Options:
+-c : Creates Archive
+-x : Extract the archive
+-f : creates archive with given filename
+-t : displays or lists files in archived file
+-u : archives and adds to an existing archive file
+-v : Displays Verbose Information
+-A : Concatenates the archive files
+-z : zip, tells tar command that create tar file using gzip
+-j : filter archive tar file using tbzip
+-W : Verify a archive file
+-r : update or add file or directory in already existed .tar file
